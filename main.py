@@ -1,20 +1,24 @@
+ StudySprint Main Menu
+
+import quiz
+
+
 def main():
-    print("Welcome to StudySprint!")
-    print()
-    print("1. Flashcards")
-    print("2. Quiz")
-    print("3. Exit")
+    while True:
+        print()
+        print("=== StudySprint ===")
+        print("1. Start Quiz")
+        print("2. Exit")
 
-    choice = input("Choose an option: ")
+        choice = input("Choose an option: ").strip()
 
-    if choice == "1":
-        print("Flashcards selected.")
-    elif choice == "2":
-        print("Quiz selected.")
-    elif choice == "3":
-        print("Goodbye!")
-    else:
-        print("Invalid choice.")
+        if choice == "1":
+            quiz.run_quiz()
+        elif choice == "2":
+            print("Thanks for using StudySprint!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 
 if __name__ == "__main__":
